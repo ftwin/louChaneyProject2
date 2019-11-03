@@ -1,0 +1,177 @@
+section:nth-of-type(2),
+section:nth-of-type(3) {
+    background-color: #21404F;
+}
+
+section:nth-of-type(1),
+section:nth-of-type(4),
+main {
+    background-color: $mainColour;
+}
+
+.moreLink {
+    font-family: $headerFont;
+    text-transform: lowercase;
+    padding: 0 25px 3px;
+    color: $mainColour;
+    background-color: $secondaryColour;
+}
+
+.articles .moreLink {
+    color: $secondaryColour;
+    background-color: $mainColour;
+}
+
+.newTechniques {
+    padding: 220px 0 120px 0;
+    display: flex;
+
+    p {
+        margin-bottom: 0;
+        padding-bottom: 50px;
+    }
+    div:first-of-type {
+        flex: 0 1 calc(100% * .75);
+        padding-right: 150px;
+    }
+    div:last-of-type {
+        flex: 0 1 calc(100% * .25);
+        img {
+            box-shadow: -25px 25px $accentColour;
+        }
+    }
+}
+
+.gallery {
+    padding: 100px 0;
+    li:nth-of-type(2) {
+        padding: 0 25px;
+    }
+}
+
+main {
+    padding: 60px 0;
+    ul {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+            li {
+                width: 50%;
+                font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            }
+        }
+
+        li:nth-of-type(1)::before {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            top: 0;
+            
+            content: "\f559";
+
+        }
+
+        // <i class="fas fa-calendar-check"></i>
+        // <i class="fas fa-users"></i>
+        // <i class="fas fa-file"></i>
+        // <i class="fas fa-phone"></i>
+}
+
+.articles {
+    padding: 40px 0;
+    h3, 
+    p {
+        color: $mainColour;
+        margin-top: 0;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    div {
+        width: 45%;
+    }
+    div:nth-of-type(2) {
+        margin-right: 10%;
+    }
+    
+    div:nth-of-type(3) {
+        order: 1;
+    }
+
+    div:nth-of-type(4) {
+        text-align: right;
+        margin-left: 10%;
+        margin-top: 100px;
+    }
+
+    div:nth-of-type(2),
+    div:nth-of-type(4) {
+        padding: 50px 0;
+        width: 35%;
+    }
+    .leftImage {
+        position: relative;
+        img {
+            box-shadow: 25px 25px $accentColour;
+            position: absolute;
+            top: -75px;
+        }
+    }
+
+    .rightImage {
+        position: relative;
+        img {
+            box-shadow: -25px 25px $accentColour;
+            position: absolute;
+            bottom: -75px;
+        }
+    }
+}
+
+.searchByStyle .wrapper {
+    padding: 150px 0;
+    text-align: center;
+    h2 {
+        margin-bottom: 15px;
+    }
+    p {
+        padding-bottom: 50px;
+        margin: 0;
+    }
+}
+
+footer {
+    background-color: #111211;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    p {
+        margin: 0;
+    }
+}
+
+/* Step 1: Common Properties: All required to make icons render reliably */
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Step 2: Reference Individual Icons */
+.rightImage::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f007";
+}
+
+/* Note: Make sure to include the correct weight and unicode value for the icon */
+.tps::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f1ea";
+}

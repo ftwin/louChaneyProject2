@@ -1,0 +1,66 @@
+// font-family: 'Pacifico', cursive;
+// font-family: 'Lato', sans-serif; 400 & 700
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $mainFont;
+    color: $textColour;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+h2, h3 {
+    font-family: $headerFont;
+    color: $secondaryColour;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+
+h2 {
+    font-size: 4.3rem;
+    line-height: 5.8rem;
+    letter-spacing: 2.7px;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 4rem;
+    line-height: 5.8rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+

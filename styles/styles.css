@@ -1,0 +1,514 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #161515;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.2rem;
+}
+
+img {
+  width: 100%;
+}
+
+h2, h3 {
+  font-family: "Pacifico", cursive;
+  color: #1A315C;
+  margin-top: 0;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 4.3rem;
+  line-height: 5.8rem;
+  letter-spacing: 2.7px;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 4rem;
+  line-height: 5.8rem;
+  letter-spacing: 2.5px;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+header {
+  background: url(../assets/headerHome.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 95vh;
+  min-height: 700px;
+}
+
+header a {
+  color: #1A315C;
+  font-weight: bold;
+  line-height: 2.9rem;
+  letter-spacing: 0.14px;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul {
+  text-transform: uppercase;
+}
+
+nav li::after {
+  content: "";
+  border-bottom: 2px solid #0CADC0;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 5.8rem;
+  line-height: 6.8rem;
+  color: #1A315C;
+  width: 55%;
+  font-weight: normal;
+}
+
+a.logo {
+  font-family: "Pacifico", cursive;
+  color: #1E1713;
+  font-size: 3rem;
+  line-height: 2.4rem;
+  letter-spacing: .17rem;
+}
+
+.headerImage {
+  width: 56%;
+  position: relative;
+}
+
+.headerImage img {
+  position: absolute;
+  top: 50px;
+}
+
+section:nth-of-type(2),
+section:nth-of-type(3) {
+  background-color: #21404F;
+}
+
+section:nth-of-type(1),
+section:nth-of-type(4),
+main {
+  background-color: #CCEDFB;
+}
+
+.moreLink {
+  font-family: "Pacifico", cursive;
+  text-transform: lowercase;
+  padding: 0 25px 3px;
+  color: #CCEDFB;
+  background-color: #1A315C;
+}
+
+.articles .moreLink {
+  color: #1A315C;
+  background-color: #CCEDFB;
+}
+
+.newTechniques {
+  padding: 220px 0 120px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.newTechniques p {
+  margin-bottom: 0;
+  padding-bottom: 50px;
+}
+
+.newTechniques div:first-of-type {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(100% * .75);
+          flex: 0 1 calc(100% * .75);
+  padding-right: 150px;
+}
+
+.newTechniques div:last-of-type {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(100% * .25);
+          flex: 0 1 calc(100% * .25);
+}
+
+.newTechniques div:last-of-type img {
+  -webkit-box-shadow: -25px 25px #0CADC0;
+          box-shadow: -25px 25px #0CADC0;
+}
+
+.gallery {
+  padding: 100px 0;
+}
+
+.gallery li:nth-of-type(2) {
+  padding: 0 25px;
+}
+
+main {
+  padding: 60px 0;
+}
+
+main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main ul li {
+  width: 50%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+main li:nth-of-type(1)::before {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 0;
+  top: 0;
+  content: "\f559";
+}
+
+.articles {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.articles h3,
+.articles p {
+  color: #CCEDFB;
+  margin-top: 0;
+}
+
+.articles div {
+  width: 45%;
+}
+
+.articles div:nth-of-type(2) {
+  margin-right: 10%;
+}
+
+.articles div:nth-of-type(3) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.articles div:nth-of-type(4) {
+  text-align: right;
+  margin-left: 10%;
+  margin-top: 100px;
+}
+
+.articles div:nth-of-type(2),
+.articles div:nth-of-type(4) {
+  padding: 50px 0;
+  width: 35%;
+}
+
+.articles .leftImage {
+  position: relative;
+}
+
+.articles .leftImage img {
+  -webkit-box-shadow: 25px 25px #0CADC0;
+          box-shadow: 25px 25px #0CADC0;
+  position: absolute;
+  top: -75px;
+}
+
+.articles .rightImage {
+  position: relative;
+}
+
+.articles .rightImage img {
+  -webkit-box-shadow: -25px 25px #0CADC0;
+          box-shadow: -25px 25px #0CADC0;
+  position: absolute;
+  bottom: -75px;
+}
+
+.searchByStyle .wrapper {
+  padding: 150px 0;
+  text-align: center;
+}
+
+.searchByStyle .wrapper h2 {
+  margin-bottom: 15px;
+}
+
+.searchByStyle .wrapper p {
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+footer {
+  background-color: #111211;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Step 1: Common Properties: All required to make icons render reliably */
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Step 2: Reference Individual Icons */
+.rightImage::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f007";
+}
+
+/* Note: Make sure to include the correct weight and unicode value for the icon */
+.tps::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f1ea";
+}

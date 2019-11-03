@@ -1,0 +1,57 @@
+header {
+    background: url(../assets/headerHome.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    min-height: 700px;
+    a {
+        color: $secondaryColour;
+        font-weight: bold;
+        line-height: 2.9rem;
+        letter-spacing: 0.14px;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        text-transform: uppercase;
+    }
+
+    li::after {
+        content: "";
+        border-bottom: 2px solid $accentColour;
+    }
+}
+
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 5.8rem;
+    line-height: 6.8rem;
+    color: $secondaryColour;
+    width: 55%;
+    font-weight: normal;
+}
+
+a.logo {
+    font-family: $headerFont;
+    color: $logoColour;
+    font-size: 3rem;
+    line-height: 2.4rem;
+    letter-spacing: .17rem;
+}
+
+
+.headerImage {
+    width: 56%;
+    position: relative;
+    img {
+        position: absolute;
+        top: 50px;
+    }
+}
