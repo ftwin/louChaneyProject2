@@ -284,6 +284,8 @@ nav {
 
 nav ul {
   text-transform: uppercase;
+  position: relative;
+  left: 20px;
 }
 
 nav li.currentPage a::after {
@@ -565,6 +567,19 @@ footer p {
   margin: 0;
 }
 
+.contactFormContainer {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+  top: -100px;
+  left: -5%;
+}
+
+.contactMain {
+  padding: 0;
+}
+
 .contactMain .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,13 +589,15 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contactMain .wrapper .contactForm {
-  position: relative;
-  -ms-flex-preferred-size: calc(100% / 3 * 2);
-      flex-basis: calc(100% / 3 * 2);
-  padding: 40px;
+  -webkit-box-shadow: 25px 25px #0CADC0;
+          box-shadow: 25px 25px #0CADC0;
+  padding: 80px 40px 40px 40px;
   background: #21404F;
   color: #ffffff;
 }
@@ -646,25 +663,34 @@ footer p {
   border: none;
   background: #CCEDFB;
   font-family: "Pacifico", cursive;
+  text-transform: lowercase;
 }
 
 .contactMain .wrapper form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .contactMain .wrapper form .contactInfo {
-  width: calc(50% - 20px);
+  width: 48%;
 }
 
 .contactMain .wrapper .contact {
-  -ms-flex-preferred-size: calc(100% / 3);
-      flex-basis: calc(100% / 3);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 21%;
+          flex: 0 0 21%;
+}
+
+.contactMain .wrapper .contact p {
+  margin: 0;
+}
+
+.contactMain .wrapper .contact .email {
+  margin-bottom: 10px;
 }

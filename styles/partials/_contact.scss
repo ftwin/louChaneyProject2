@@ -1,12 +1,23 @@
+.contactFormContainer {
+    position: relative;
+    flex: 0 0 75%;
+    top: -100px;
+    left: -5%;
+}
+
+.contactMain {
+    padding: 0;
+}
+
 .contactMain .wrapper {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
 
     .contactForm {
-        position: relative;
-        flex-basis: calc(100% / 3 * 2);
-        padding: 40px;
+        box-shadow: 25px 25px $accentColour;
+        padding: 80px 40px 40px 40px;
         background: $mainColour2;
         color: #ffffff;
         ::placeholder {
@@ -57,20 +68,29 @@
             border: none;
             background: $mainColour;
             font-family: $headerFont;
+            text-transform: lowercase;
         }
     }
 
     form {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
         flex-wrap: wrap;
+        justify-content: space-between;
         .contactInfo {
-            width: calc(50% - 20px);
-            }
+            width: 48%;
+        }
     }
 
+    
+
     .contact {
-        flex-basis: calc(100% / 3);
+        flex: 0 0 21%;
+        p {
+            margin: 0;
+        }
+
+        .email {
+            margin-bottom: 10px;
+        }
     }
 }
