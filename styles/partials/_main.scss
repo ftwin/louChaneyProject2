@@ -56,27 +56,34 @@ main {
         position: relative;
         flex-wrap: wrap;
             li {
-                width: 50%;
-                font-family: "Font Awesome 5 Free";
-            font-weight: 900;
+                width: 50%;  
             }
-        }
+    }
 
-        li:nth-of-type(1)::before {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            left: 0;
-            top: 0;
-            
-            content: "\f559";
+    li {
+        position: relative;
+        padding-left: 50px;
+    }
 
-        }
+    li:nth-of-type(1),
+    li:nth-of-type(3) {
+        padding-right: 25px;
+    }
 
-        // <i class="fas fa-calendar-check"></i>
-        // <i class="fas fa-users"></i>
-        // <i class="fas fa-file"></i>
-        // <i class="fas fa-phone"></i>
+    div.icon {
+        width: 5.2rem;
+        height: 5.2rem;
+        background: $accentColour;
+        border-radius: 50%;
+        padding: 0;
+        position: absolute;
+        left: -20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.8rem;
+        color: #ffffff;
+    }
 }
 
 .articles {
@@ -151,27 +158,4 @@ footer {
     p {
         margin: 0;
     }
-}
-
-/* Step 1: Common Properties: All required to make icons render reliably */
-.icon::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Step 2: Reference Individual Icons */
-.rightImage::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f007";
-}
-
-/* Note: Make sure to include the correct weight and unicode value for the icon */
-.tps::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f1ea";
 }
