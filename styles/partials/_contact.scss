@@ -1,0 +1,76 @@
+.contactMain .wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    .contactForm {
+        position: relative;
+        flex-basis: calc(100% / 3 * 2);
+        padding: 40px;
+        background: $mainColour2;
+        color: #ffffff;
+        ::placeholder {
+            color: #ffffff;
+        }
+
+        input,
+        textarea {
+            background: rgba(26, 49, 92, 0);
+            border: none;
+            color: #ffffff;
+        }
+
+        input:focus,
+        textarea:focus {
+            background: lighten($mainColour2, 10);
+        }
+
+        input {
+            border-bottom: 2px solid $accentColour;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            padding-left: 25px;
+        }
+
+        div.message {
+            label {
+                display: block;
+                width: 100%;
+            }
+            border: 2px solid $accentColour;
+            margin: 40px 0;
+            width: 100%;
+            padding: 40px 0;
+
+            textarea {
+                width: calc(100% - 50px);
+                padding: 5px 0;
+                margin: 0 25px;
+            }
+        }
+
+        button {
+            width: 100%;
+            border: none;
+            background: $mainColour;
+            font-family: $headerFont;
+        }
+    }
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        .contactInfo {
+            width: calc(50% - 20px);
+            }
+    }
+
+    .contact {
+        flex-basis: calc(100% / 3);
+    }
+}

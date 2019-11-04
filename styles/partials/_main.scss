@@ -1,6 +1,6 @@
 section:nth-of-type(2),
 section:nth-of-type(3) {
-    background-color: #21404F;
+    background-color: $mainColour2;
 }
 
 section:nth-of-type(1),
@@ -15,11 +15,29 @@ main {
     padding: 0 25px 3px;
     color: $mainColour;
     background-color: $secondaryColour;
+
+    &:hover,
+    &:focus {
+        color: $secondaryColour;
+        background: rgba(204, 237, 251, 0);
+        border: 1px solid $secondaryColour;
+        transition: 250ms;
+    }
 }
 
+.icon-background {
+    color: #0CADC0;;
+}
 .articles .moreLink {
     color: $secondaryColour;
     background-color: $mainColour;
+
+    &:hover,
+    &:focus {
+        color: $mainColour;
+        background: rgba(204, 237, 251, 0);
+        border: 1px solid $mainColour;
+    }
 }
 
 .newTechniques {
@@ -52,7 +70,6 @@ main {
 main {
     padding: 60px 0;
     ul {
-        display: flex;
         position: relative;
         flex-wrap: wrap;
             li {
