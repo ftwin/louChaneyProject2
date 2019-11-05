@@ -270,6 +270,15 @@ header.contact {
   min-height: 300px;
 }
 
+header.blog {
+  background: url(../assets/blogHeader.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  height: 70vh;
+  min-height: 300px;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -328,9 +337,11 @@ h1 {
   font-weight: normal;
 }
 
-h1.contact {
+h1.contact,
+h1.blog {
   font-size: 6.8rem;
   line-height: 6.4rem;
+  margin-top: 100px;
 }
 
 a.logo {
@@ -567,6 +578,12 @@ footer p {
   margin: 0;
 }
 
+h1.contact {
+  font-size: 6.8rem;
+  line-height: 6.4rem;
+  margin-top: 100px;
+}
+
 .contactFormContainer {
   position: relative;
   -webkit-box-flex: 0;
@@ -594,7 +611,7 @@ footer p {
           align-items: center;
 }
 
-.contactMain .wrapper .contactForm {
+.contactForm {
   -webkit-box-shadow: 25px 25px #0CADC0;
           box-shadow: 25px 25px #0CADC0;
   padding: 80px 40px 40px 40px;
@@ -602,63 +619,63 @@ footer p {
   color: #ffffff;
 }
 
-.contactMain .wrapper .contactForm ::-webkit-input-placeholder {
+.contactForm ::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.contactMain .wrapper .contactForm :-ms-input-placeholder {
+.contactForm :-ms-input-placeholder {
   color: #ffffff;
 }
 
-.contactMain .wrapper .contactForm ::-ms-input-placeholder {
+.contactForm ::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.contactMain .wrapper .contactForm ::placeholder {
+.contactForm ::placeholder {
   color: #ffffff;
 }
 
-.contactMain .wrapper .contactForm input,
-.contactMain .wrapper .contactForm textarea {
+.contactForm input,
+.contactForm textarea {
   background: rgba(26, 49, 92, 0);
   border: none;
   color: #ffffff;
 }
 
-.contactMain .wrapper .contactForm input:focus,
-.contactMain .wrapper .contactForm textarea:focus {
+.contactForm input:focus,
+.contactForm textarea:focus {
   background: #305d73;
 }
 
-.contactMain .wrapper .contactForm input {
+.contactForm input {
   border-bottom: 2px solid #0CADC0;
   width: 100%;
 }
 
-.contactMain .wrapper .contactForm label {
+.contactForm label {
   display: block;
   padding-left: 25px;
 }
 
-.contactMain .wrapper .contactForm div.message {
+.contactForm div.message {
   border: 2px solid #0CADC0;
   margin: 40px 0;
   width: 100%;
   padding: 40px 0;
 }
 
-.contactMain .wrapper .contactForm div.message label {
+.contactForm div.message label {
   display: block;
   width: 100%;
 }
 
-.contactMain .wrapper .contactForm div.message textarea {
+.contactForm div.message textarea {
   width: calc(100% - 50px);
   padding: 5px 0;
   margin: 0 25px;
 }
 
-.contactMain .wrapper .contactForm button {
+.contactForm button {
   width: 100%;
   border: none;
   background: #CCEDFB;
@@ -666,7 +683,7 @@ footer p {
   text-transform: lowercase;
 }
 
-.contactMain .wrapper form {
+form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,20 +694,114 @@ footer p {
           justify-content: space-between;
 }
 
-.contactMain .wrapper form .contactInfo {
+form .contactInfo {
   width: 48%;
 }
 
-.contactMain .wrapper .contact {
+.contact {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 21%;
           flex: 0 0 21%;
 }
 
-.contactMain .wrapper .contact p {
+.contact p {
   margin: 0;
 }
 
-.contactMain .wrapper .contact .email {
-  margin-bottom: 10px;
+.contact .email {
+  margin: 20px 0;
+}
+
+.contact .email a {
+  color: #161515;
+}
+
+.contact .email a:hover,
+.contact .email a:focus {
+  text-decoration: underline;
+}
+
+.contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.contact ul li {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45px;
+          flex: 0 0 45px;
+}
+
+.contact i {
+  color: #1A315C;
+}
+
+.contact a:hover i,
+.contact a:focus i {
+  color: #305bac;
+}
+
+article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+}
+
+aside {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+}
+
+.blogMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blogMain .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blogContainer {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+  top: -100px;
+  left: -5%;
+}
+
+.commentsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.commentsContainer h2 {
+  width: 100%;
 }

@@ -1,0 +1,35 @@
+article {
+    flex: 0 0 60%;
+}
+
+aside {
+    flex: 0 0 35%;
+}
+
+.blogMain {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.blogMain .wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blogContainer {
+    position: relative;
+    flex: 0 0 75%;
+    top: -100px;
+    left: -5%;
+}
+
+.commentsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    h2 {
+        width: 100%;
+    }
+}

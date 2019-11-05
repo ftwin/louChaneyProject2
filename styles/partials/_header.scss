@@ -27,6 +27,15 @@ header.contact {
     min-height: 300px;
 }
 
+header.blog {
+    background: url(../assets/blogHeader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 70vh;
+    min-height: 300px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -79,9 +88,11 @@ h1 {
     font-weight: normal;
 }
 
-h1.contact {
+h1.contact,
+h1.blog {
     font-size: 6.8rem;
     line-height: 6.4rem;
+    margin-top: 100px;
 }
 
 a.logo {

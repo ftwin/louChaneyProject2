@@ -1,3 +1,9 @@
+h1.contact {
+    font-size: 6.8rem;
+    line-height: 6.4rem;
+    margin-top: 100px;
+}
+
 .contactFormContainer {
     position: relative;
     flex: 0 0 75%;
@@ -14,83 +20,113 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+}
 
-    .contactForm {
-        box-shadow: 25px 25px $accentColour;
-        padding: 80px 40px 40px 40px;
-        background: $mainColour2;
+.contactForm {
+    box-shadow: 25px 25px $accentColour;
+    padding: 80px 40px 40px 40px;
+    background: $mainColour2;
+    color: #ffffff;
+    ::placeholder {
         color: #ffffff;
-        ::placeholder {
-            color: #ffffff;
-        }
+    }
 
-        input,
-        textarea {
-            background: rgba(26, 49, 92, 0);
-            border: none;
-            color: #ffffff;
-        }
+    input,
+    textarea {
+        background: rgba(26, 49, 92, 0);
+        border: none;
+        color: #ffffff;
+    }
 
-        input:focus,
-        textarea:focus {
-            background: lighten($mainColour2, 10);
-        }
+    input:focus,
+    textarea:focus {
+        background: lighten($mainColour2, 10);
+    }
 
-        input {
-            border-bottom: 2px solid $accentColour;
-            width: 100%;
-        }
+    input {
+        border-bottom: 2px solid $accentColour;
+        width: 100%;
+    }
 
+    label {
+        display: block;
+        padding-left: 25px;
+    }
+
+    div.message {
         label {
             display: block;
-            padding-left: 25px;
-        }
-
-        div.message {
-            label {
-                display: block;
-                width: 100%;
-            }
-            border: 2px solid $accentColour;
-            margin: 40px 0;
             width: 100%;
-            padding: 40px 0;
-
-            textarea {
-                width: calc(100% - 50px);
-                padding: 5px 0;
-                margin: 0 25px;
-            }
         }
+        border: 2px solid $accentColour;
+        margin: 40px 0;
+        width: 100%;
+        padding: 40px 0;
 
-        button {
-            width: 100%;
-            border: none;
-            background: $mainColour;
-            font-family: $headerFont;
-            text-transform: lowercase;
+        textarea {
+            width: calc(100% - 50px);
+            padding: 5px 0;
+            margin: 0 25px;
         }
     }
 
-    form {
+    button {
+        width: 100%;
+        border: none;
+        background: $mainColour;
+        font-family: $headerFont;
+        text-transform: lowercase;
+    }
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .contactInfo {
+        width: 48%;
+    }
+}
+
+
+
+.contact {
+    flex: 0 0 21%;
+
+    p {
+        margin: 0;
+    }
+
+    .email {
+        margin: 20px 0;
+        a {
+            color: $textColour;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+        }
+    }
+
+    ul {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .contactInfo {
-            width: 48%;
+        justify-content: left;
+        li {
+            flex-wrap: nowrap;
+            padding: 0;
+            flex: 0 0 45px;
         }
     }
 
-    
+    i {
+        color: $secondaryColour;
+    }
 
-    .contact {
-        flex: 0 0 21%;
-        p {
-            margin: 0;
-        }
-
-        .email {
-            margin-bottom: 10px;
+    a:hover ,
+    a:focus {
+        i {
+            color: lighten($secondaryColour, 20);
         }
     }
 }
