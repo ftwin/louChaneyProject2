@@ -1,7 +1,44 @@
-h1.contact {
-    font-size: 6.8rem;
-    line-height: 6.4rem;
-    margin-top: 100px;
+
+
+.contact {
+    flex: 0 0 21%;
+
+    p {
+        margin: 0;
+    }
+
+    .email {
+        margin: 20px 0;
+        a {
+            color: $textColour;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: left;
+        li {
+            flex-wrap: nowrap;
+            padding: 0;
+            flex: 0 0 45px;
+        }
+    }
+
+    i {
+        color: $secondaryColour;
+    }
+
+    a:hover ,
+    a:focus {
+        i {
+            color: lighten($secondaryColour, 20);
+        }
+    }
 }
 
 .contactFormContainer {
@@ -77,6 +114,11 @@ h1.contact {
         font-family: $headerFont;
         text-transform: lowercase;
     }
+
+    button:hover,
+    button:focus {
+        background: lighten($mainColour, 20);
+    }
 }
 
 form {
@@ -90,43 +132,4 @@ form {
 
 
 
-.contact {
-    flex: 0 0 21%;
 
-    p {
-        margin: 0;
-    }
-
-    .email {
-        margin: 20px 0;
-        a {
-            color: $textColour;
-        }
-
-        a:hover,
-        a:focus {
-            text-decoration: underline;
-        }
-    }
-
-    ul {
-        display: flex;
-        justify-content: left;
-        li {
-            flex-wrap: nowrap;
-            padding: 0;
-            flex: 0 0 45px;
-        }
-    }
-
-    i {
-        color: $secondaryColour;
-    }
-
-    a:hover ,
-    a:focus {
-        i {
-            color: lighten($secondaryColour, 20);
-        }
-    }
-}

@@ -337,6 +337,12 @@ h1 {
   font-weight: normal;
 }
 
+@media (max-width: 1400px) {
+  h1 {
+    color: red;
+  }
+}
+
 h1.contact,
 h1.blog {
   font-size: 6.8rem;
@@ -350,6 +356,7 @@ a.logo {
   font-size: 3rem;
   line-height: 2.4rem;
   letter-spacing: .17rem;
+  margin-left: -20px;
 }
 
 .headerImage {
@@ -452,13 +459,10 @@ main ul {
       flex-wrap: wrap;
 }
 
-main ul li {
-  width: 50%;
-}
-
 main li {
   position: relative;
   padding-left: 50px;
+  width: 50%;
 }
 
 main li:nth-of-type(1),
@@ -578,10 +582,54 @@ footer p {
   margin: 0;
 }
 
-h1.contact {
-  font-size: 6.8rem;
-  line-height: 6.4rem;
-  margin-top: 100px;
+.contact {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 21%;
+          flex: 0 0 21%;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.contact .email {
+  margin: 20px 0;
+}
+
+.contact .email a {
+  color: #161515;
+}
+
+.contact .email a:hover,
+.contact .email a:focus {
+  text-decoration: underline;
+}
+
+.contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.contact ul li {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45px;
+          flex: 0 0 45px;
+}
+
+.contact i {
+  color: #1A315C;
+}
+
+.contact a:hover i,
+.contact a:focus i {
+  color: #305bac;
 }
 
 .contactFormContainer {
@@ -683,6 +731,11 @@ h1.contact {
   text-transform: lowercase;
 }
 
+.contactForm button:hover,
+.contactForm button:focus {
+  background: white;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,66 +751,22 @@ form .contactInfo {
   width: 48%;
 }
 
-.contact {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 21%;
-          flex: 0 0 21%;
-}
-
-.contact p {
-  margin: 0;
-}
-
-.contact .email {
-  margin: 20px 0;
-}
-
-.contact .email a {
-  color: #161515;
-}
-
-.contact .email a:hover,
-.contact .email a:focus {
-  text-decoration: underline;
-}
-
-.contact ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-}
-
-.contact ul li {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  padding: 0;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 45px;
-          flex: 0 0 45px;
-}
-
-.contact i {
-  color: #1A315C;
-}
-
-.contact a:hover i,
-.contact a:focus i {
-  color: #305bac;
-}
-
 article {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 60%;
-          flex: 0 0 60%;
+      -ms-flex: 0 0 63%;
+          flex: 0 0 63%;
 }
 
+article,
 aside {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 35%;
-          flex: 0 0 35%;
+  color: #ffffff;
+}
+
+article h2,
+article h3,
+aside h2,
+aside h3 {
+  color: #ffffff;
 }
 
 .blogMain {
@@ -787,11 +796,34 @@ aside {
 
 .blogContainer {
   position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 75%;
-          flex: 0 0 75%;
-  top: -100px;
-  left: -5%;
+  top: -180px;
+  left: 0;
+  background: #21404F;
+  border: 15px solid #0CADC0;
+  border-left: none;
+}
+
+.blogContent,
+.commentsContainer {
+  margin-left: 16%;
+}
+
+.blogContent {
+  padding: 60px 80px 80px 0;
+}
+
+.blogImage {
+  position: relative;
+  background: #0CADC0;
+  height: 560px;
+  margin-left: 40px;
+}
+
+.blogImage img {
+  position: relative;
+  width: 105%;
+  left: -50px;
+  top: -50px;
 }
 
 .commentsContainer {
@@ -800,8 +832,155 @@ aside {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: -120px;
 }
 
 .commentsContainer h2 {
   width: 100%;
+  font-size: 4rem;
+  color: #1A315C;
+}
+
+.commentsContainer p {
+  color: #161515;
+  margin: 0;
+}
+
+.comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 60px 0;
+}
+
+.comment div p:first-of-type {
+  color: #1A315C;
+  font-weight: bold;
+}
+
+.profilePic {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90px;
+          flex: 0 0 90px;
+}
+
+.commentContent {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 85%;
+          flex: 0 1 85%;
+}
+
+.blogCommentForm {
+  padding: 40px;
+}
+
+.blogCommentForm input,
+.blogCommentForm textarea {
+  background: rgba(26, 49, 92, 0);
+  border: none;
+  color: #21404F;
+}
+
+.blogCommentForm input:focus,
+.blogCommentForm textarea:focus {
+  background: #fbfeff;
+}
+
+.blogCommentForm input {
+  border-bottom: 2px solid #0CADC0;
+  width: 100%;
+}
+
+.blogCommentForm label {
+  display: block;
+  padding-left: 25px;
+  color: #21404F;
+}
+
+.blogCommentForm div.message {
+  border: 2px solid #0CADC0;
+  margin: 40px 0;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.blogCommentForm div.message label {
+  display: block;
+  width: 100%;
+}
+
+.blogCommentForm div.message textarea {
+  width: calc(100% - 50px);
+  padding: 5px 0;
+  margin: 0 25px;
+}
+
+.blogCommentForm button {
+  width: 100%;
+  border: none;
+  background: #1A315C;
+  font-family: "Pacifico", cursive;
+  text-transform: lowercase;
+  color: #ffffff;
+  padding-bottom: 5px;
+}
+
+.blogCommentForm button:hover,
+.blogCommentForm button:focus {
+  background: #305bac;
+}
+
+h3 {
+  font-size: 3.5rem;
+  letter-spacing: .29rem;
+}
+
+aside {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+}
+
+aside a {
+  color: #ffffff;
+}
+
+aside a:hover,
+aside a:focus {
+  text-decoration: underline;
+}
+
+aside .asideContainer {
+  background: #21404F;
+  padding-left: 20px;
+  padding-bottom: 40px;
+}
+
+aside p {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+aside ul {
+  list-style: initial;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 25px;
+}
+
+aside li {
+  padding-left: 10px;
+  padding-right: 0;
+  width: 100%;
+}
+
+.asideImage {
+  position: relative;
+  top: -20px;
+  left: 0;
 }

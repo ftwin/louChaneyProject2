@@ -12,10 +12,6 @@ header {
         text-align: center;
         padding: 20px;
     }
-
-    // li:last-child a {
-    //     padding-right: 0;
-    // }
 }
 
 header.contact {
@@ -88,6 +84,13 @@ h1 {
     font-weight: normal;
 }
 
+@include laptop {
+    h1 {
+        color: red;
+    }
+}
+
+
 h1.contact,
 h1.blog {
     font-size: 6.8rem;
@@ -101,6 +104,7 @@ a.logo {
     font-size: 3rem;
     line-height: 2.4rem;
     letter-spacing: .17rem;
+    margin-left: -20px;
 }
 
 

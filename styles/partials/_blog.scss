@@ -1,9 +1,17 @@
+
+
 article {
-    flex: 0 0 60%;
+    flex: 0 0 63%;
 }
 
+article, 
 aside {
-    flex: 0 0 35%;
+    h2,
+    h3 {
+        color: #ffffff;
+    }
+
+    color: #ffffff;
 }
 
 .blogMain {
@@ -21,15 +29,177 @@ aside {
 
 .blogContainer {
     position: relative;
-    flex: 0 0 75%;
-    top: -100px;
-    left: -5%;
+    top: -180px;
+    left: 0;
+    background: $mainColour2;
+    border: 15px solid $accentColour;
+    border-left: none;
+}
+
+.blogContent,
+.commentsContainer {
+    margin-left: 16%;
+}
+
+.blogContent {
+    padding: 60px 80px 80px 0;
+}
+
+
+.blogImage { 
+    position: relative;
+    background: $accentColour;
+    height: 560px;
+    margin-left: 40px;
+    img {
+        position: relative;
+        width: 105%;
+        left: -50px;
+        top: -50px;
+    }
 }
 
 .commentsContainer {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -120px;
     h2 {
         width: 100%;
+        font-size: 4rem;
+        color: $secondaryColour;
     }
+
+    p {
+        color: $textColour;
+        margin: 0;
+    }
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+
+    div p:first-of-type {
+        color: $secondaryColour;
+        font-weight: bold;
+    }
+}
+
+.profilePic {
+    flex: 0 0 90px;
+}
+
+.commentContent {
+    flex: 0 1 85%;
+}
+//Comment Form-----------------------------------------------
+
+.blogCommentForm {
+
+    padding: 40px;
+
+    input,
+    textarea {
+        background: rgba(26, 49, 92, 0);
+        border: none;
+        color: $mainColour2;
+    }
+
+    input:focus,
+    textarea:focus {
+        background: lighten($mainColour, 10);
+    }
+
+    input {
+        border-bottom: 2px solid $accentColour;
+        width: 100%;
+    }
+
+    label {
+        display: block;
+        padding-left: 25px;
+        color: $mainColour2;
+    }
+
+    div.message {
+        label {
+            display: block;
+            width: 100%;
+        }
+        border: 2px solid $accentColour;
+        margin: 40px 0;
+        width: 100%;
+        padding: 40px 0;
+
+        textarea {
+            width: calc(100% - 50px);
+            padding: 5px 0;
+            margin: 0 25px;
+        }
+    }
+
+    button {
+        width: 100%;
+        border: none;
+        background: $secondaryColour;
+        font-family: $headerFont;
+        text-transform: lowercase;
+        color: #ffffff;
+        padding-bottom: 5px;
+    }
+
+    button:hover,
+    button:focus {
+        background: lighten($secondaryColour, 20);
+    }
+}
+
+// Aside-----------------------------------------------------
+
+
+h3 {
+    font-size: 3.5rem;
+    letter-spacing: .29rem;
+}
+
+aside {
+    flex: 0 0 25%;
+    
+    a {
+    color: #ffffff;
+    }
+
+    a:hover,
+    a:focus {
+        text-decoration: underline;
+    }
+    .asideContainer {
+        background: $mainColour2;
+        padding-left: 20px;
+        padding-bottom: 40px;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    ul {
+        list-style: initial;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+
+    li {
+        padding-left: 10px;
+        padding-right: 0;
+        width: 100%;
+    }
+}
+
+.asideImage {
+    position: relative;
+    top: -20px;
+    left: 0;
 }
