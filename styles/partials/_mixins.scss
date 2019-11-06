@@ -17,13 +17,13 @@
 }
 
 @mixin smallTablet{
-   @media (max-width: 800px){
+   @media (max-width: 500px){
        @content;
    }
 }
 
-@mixin largePhone{
-   @media (max-width: 800px){
+@mixin smallPhone{
+   @media (max-width: 350px){
        @content;
    }
 }

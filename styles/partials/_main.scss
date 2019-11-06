@@ -44,6 +44,10 @@ main {
     padding: 220px 0 120px 0;
     display: flex;
 
+     @include laptopSmall {
+               padding: 60px 0;
+            }
+
     p {
         margin-bottom: 0;
         padding-bottom: 50px;
@@ -51,12 +55,31 @@ main {
     div:first-of-type {
         flex: 0 1 calc(100% * .75);
         padding-right: 150px;
+         @include laptopSmall {
+                padding: 60px 0 40px;
+            }
     }
     div:last-of-type {
         flex: 0 1 calc(100% * .25);
+         @include laptopSmall {
+                width: 60%;
+            }
+
+        @include smallTablet{
+              width: 100%;  
+            }
+
         img {
             box-shadow: -25px 25px $accentColour;
+            @include smallTablet{
+                box-shadow: none;
+            }
         }
+    }
+
+     @include laptopSmall {
+         flex-direction: column-reverse;
+         align-items: center;
     }
 }
 
@@ -64,6 +87,20 @@ main {
     padding: 100px 0;
     li:nth-of-type(2) {
         padding: 0 25px;
+    }
+
+    @include largeTablet {
+        padding: 40px 0;
+    }
+
+    @include largeTablet {
+        ul {
+            flex-direction: column;
+        }
+
+        li:nth-of-type(2) {
+            padding: 40px 0;
+        }
     }
 }
 
@@ -78,11 +115,19 @@ main {
         position: relative;
         padding-left: 50px;
         width: 50%;
+
+         @include laptopSmall {
+                width: 100%;
+            }
     }
 
     li:nth-of-type(1),
     li:nth-of-type(3) {
         padding-right: 25px;
+
+        @include smallTablet {
+        padding-right: 0;
+        }
     }
 
     div.icon {
@@ -98,6 +143,10 @@ main {
         align-items: center;
         font-size: 2.8rem;
         color: #ffffff;
+    }
+
+    .wrapper {
+        width: 80%;
     }
 }
 
@@ -123,6 +172,10 @@ main {
         @include laptopSmall {
         flex: 0 0 80%;
         }
+
+        @include smallTablet {
+        flex: 0 0 90%;
+        }
     }
     div:nth-of-type(2) {
         margin-right: 10%;
@@ -145,6 +198,8 @@ main {
 
         @include laptop {
             margin-top: 40px;
+            text-align: left;
+            margin: 60px 0;
         }
     }
 
@@ -159,12 +214,10 @@ main {
         @include laptopSmall {
             flex: 0 0 75%;
         }
-    }
 
-     @include laptopSmall {
-         div {
-            flex: 0 0 80%;
-            }
+        @include smallTablet {
+            flex: 0 0 90%;
+        }
     }
 
     .leftImage {
@@ -177,11 +230,19 @@ main {
             @include laptopSmall {
                 position: static;
             }
+
+            @include smallTablet{
+                box-shadow: none;
+            }
         }
+
         @include laptopSmall {
                 flex: 0 0 80%;
             }
-        
+
+        @include smallTablet {
+            flex: 0 0 90%;
+        }  
     }
 
     .rightImage {
@@ -194,6 +255,11 @@ main {
             @include laptopSmall {
                 position: static;
                 width: 100%;
+                box-shadow: 25px 25px $accentColour;
+            }
+
+            @include smallTablet{
+                box-shadow: none;
             }
         }
          @include laptopSmall {
@@ -213,7 +279,16 @@ main {
         padding-bottom: 50px;
         margin: 0;
     }
+
+    @include largeTablet{
+        padding: 60px 0;
+        text-align: left;
+        p {
+            padding-bottom: 20px;
+        }
+   }
 }
+
 
 footer {
     background-color: #111211;

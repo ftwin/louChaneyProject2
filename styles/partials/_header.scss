@@ -7,6 +7,15 @@ header {
 
     @include laptop {
         background-position: center;
+        min-height: 400px;
+    }
+
+    @include laptopSmall {
+        height: auto;
+    }
+
+    @include largeTablet {
+        min-height: auto;
     }
 
 
@@ -20,6 +29,18 @@ header {
     }
 }
 
+.mobileNav {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transform: rotate(90deg);
+    display: none;
+    font-size: 3rem;
+
+    @include largeTablet {
+        display: block;
+    }
+}
 
 
 header.contact {
@@ -28,7 +49,7 @@ header.contact {
     background-size: cover;
     background-position: right;
     height: 60vh;
-    min-height: 300px;
+    min-height: 500px;
 }
 
 header.blog {
@@ -77,7 +98,11 @@ nav {
            transition: 250ms;
         }
     }
-
+    @include largeTablet{
+        ul {
+            display: none;
+        }
+   }
     
 }
     
@@ -94,6 +119,21 @@ h1 {
     @include laptop {
         width: 70%;
     }
+
+     @include laptopSmall {
+        font-size: 4rem;
+        line-height: 5.5rem;
+    }
+
+    @include largeTablet {
+        padding: 40px 0 80px;
+        width: 60%;
+        margin: 0;
+    }
+
+    @include smallPhone {
+        width: 70%;
+    }
 }
 
 
@@ -102,6 +142,10 @@ h1.blog {
     font-size: 6.8rem;
     line-height: 6.4rem;
     margin-top: 100px;
+
+    @include laptopSmall {
+        margin-top: 50px;
+    }
 }
 
 a.logo {
@@ -120,5 +164,15 @@ a.logo {
     img {
         position: absolute;
         top: 50px;
+
+         @include laptopSmall {
+               position: static;
+            }
     }
+
+    @include largeTablet {
+        display: none;
+    }
+
+
 }

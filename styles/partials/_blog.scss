@@ -2,6 +2,10 @@
 
 article {
     flex: 0 0 63%;
+
+    @include largeTablet {
+        flex: 0 0 80%;
+    }
 }
 
 article, 
@@ -18,13 +22,10 @@ aside {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-}
-
-.blogMain .wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
+    @include largeTablet {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .blogContainer {
@@ -39,6 +40,10 @@ aside {
 .blogContent,
 .commentsContainer {
     margin-left: 16%;
+
+    @include laptopSmall {
+        margin-left: 10%;
+    }
 }
 
 .blogContent {
@@ -51,12 +56,25 @@ aside {
     background: $accentColour;
     height: 560px;
     margin-left: 40px;
-    img {
-        position: relative;
-        width: 105%;
-        left: -50px;
-        top: -50px;
+    @include laptop {
+       height: auto;
     }
+    img {
+        position: absolute;
+        width: 105%;
+        left: -7%;
+        top: -16%;
+
+        @include laptop {
+            position: static;
+            width: 100%;
+        }
+    }
+    @include laptop {
+        margin-left: 0;
+        position: static;
+    }
+
 }
 
 .commentsContainer {
@@ -162,6 +180,9 @@ aside {
 
 aside {
     flex: 0 0 25%;
+    @include laptop {
+        flex: 0 0 30%;
+    }
     
     h3 {
     font-size: 3.5rem;

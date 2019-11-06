@@ -11,6 +11,11 @@ body {
     font-size: 2rem;
     line-height: 2.8rem;
     letter-spacing: 0.2rem;
+
+    @include smallTablet{
+        font-size: 1.8rem;
+        line-height: 2.6rem;        
+            }
 }
 
 img {
@@ -31,6 +36,15 @@ h2 {
     line-height: 5.8rem;
     letter-spacing: 2.7px;
     margin-bottom: 0;
+
+    @include smallTablet{
+        font-size: 3.2rem;
+        line-height: 4rem;   
+    }
+
+    @include smallPhone {
+        font-size: 2.5rem;
+    }
 }
 
 h3 {
@@ -45,6 +59,15 @@ h3 {
 
     @include laptopSmall {
         font-size: 3rem;
+    }
+
+    @include smallTablet{
+        font-size: 2.6rem;
+        line-height: 3.6rem;       
+    }
+
+    @include smallPhone {
+        font-size: 2.4rem;
     }
 }
 
@@ -71,5 +94,9 @@ ul {
     width: 80%;
     max-width: 1300px;
     margin: 0 auto;
+
+    @include largeTablet {
+        width: 90%;
+    }
 }
 
