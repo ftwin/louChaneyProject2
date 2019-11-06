@@ -3,12 +3,25 @@
 .contact {
     flex: 0 0 21%;
 
+    @include laptopSmall {
+        flex: 0 0 25%; 
+        margin-bottom: 40px;       
+    }
+
     p {
         margin: 0;
+
+        @include laptopSmall {
+            text-align: center;       
+        }
     }
 
     .email {
         margin: 20px 0;
+
+        @include laptopSmall {
+            margin: 2px 0;        
+        }
         a {
             color: $textColour;
         }
@@ -22,9 +35,13 @@
     ul {
         display: flex;
         justify-content: left;
+
+        @include laptopSmall {
+            justify-content: space-between;
+            margin-bottom: 10px;        
+        }
         li {
-            flex-wrap: nowrap;
-            padding: 0;
+            padding: 10px;
             flex: 0 0 45px;
         }
     }
@@ -46,6 +63,11 @@
     flex: 0 0 75%;
     top: -100px;
     left: -5%;
+
+    @include smallTablet {
+        left: 0;  
+        top: -20px;  
+    }
 }
 
 .contactMain {
@@ -57,6 +79,14 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+
+    @include laptopSmall {
+        flex-direction: column;        
+    }
+
+    @include smallTablet {
+        width: 100%;        
+    }
 }
 
 .contactForm {
@@ -64,6 +94,11 @@
     padding: 80px 40px 40px 40px;
     background: $mainColour2;
     color: #ffffff;
+
+    @include smallTablet {
+        box-shadow: none;  
+    }
+
     ::placeholder {
         color: #ffffff;
     }
@@ -100,6 +135,10 @@
         width: 100%;
         padding: 40px 0;
 
+        @include smallTablet {
+            padding: 10px 0;
+        }  
+
         textarea {
             width: calc(100% - 50px);
             padding: 5px 0;
@@ -127,7 +166,12 @@ form {
     justify-content: space-between;
     .contactInfo {
         width: 48%;
-    }
+
+        @include largeTablet {
+            width: 100%;
+            margin-bottom: 20px;
+        }  
+    } 
 }
 
 

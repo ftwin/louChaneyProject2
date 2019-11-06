@@ -43,13 +43,18 @@ header {
 }
 
 
-header.contact {
+header.contactHeader {
     background: url(../assets/contactHeader.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
     height: 60vh;
     min-height: 500px;
+
+    @include laptopSmall {
+        height: 40vh;
+        min-height: 300px;        
+    }
 }
 
 header.blog {
@@ -58,7 +63,15 @@ header.blog {
     background-size: cover;
     background-position: right;
     height: 70vh;
-    min-height: 300px;
+    min-height: 400px;
+
+    @include largeTablet {
+        height: 40vh;
+    }
+
+    // @include smallTablet {
+    //     height: 40px;
+    // }
 }
 
 nav {
@@ -145,6 +158,12 @@ h1.blog {
 
     @include laptopSmall {
         margin-top: 50px;
+    }
+}
+
+h1.contact {
+    @include smallTablet {
+        width: 100%;        
     }
 }
 

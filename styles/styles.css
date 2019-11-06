@@ -290,7 +290,7 @@ ul {
   margin: 0 auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .wrapper {
     width: 90%;
   }
@@ -317,7 +317,7 @@ header {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   header {
     min-height: auto;
   }
@@ -342,13 +342,13 @@ header a {
   font-size: 3rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .mobileNav {
     display: block;
   }
 }
 
-header.contact {
+header.contactHeader {
   background: url(../assets/contactHeader.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -357,13 +357,26 @@ header.contact {
   min-height: 500px;
 }
 
+@media (max-width: 1200px) {
+  header.contactHeader {
+    height: 40vh;
+    min-height: 300px;
+  }
+}
+
 header.blog {
   background: url(../assets/blogHeader.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
   height: 70vh;
-  min-height: 300px;
+  min-height: 400px;
+}
+
+@media (max-width: 850px) {
+  header.blog {
+    height: 40vh;
+  }
 }
 
 nav {
@@ -415,7 +428,7 @@ nav li a:focus::after {
   transition: 250ms;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   nav ul {
     display: none;
   }
@@ -443,7 +456,7 @@ h1 {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   h1 {
     padding: 40px 0 80px;
     width: 60%;
@@ -468,6 +481,12 @@ h1.blog {
   h1.contact,
   h1.blog {
     margin-top: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  h1.contact {
+    width: 100%;
   }
 }
 
@@ -496,7 +515,7 @@ a.logo {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .headerImage {
     display: none;
   }
@@ -625,13 +644,13 @@ main {
   padding: 0 25px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .gallery {
     padding: 40px 0;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .gallery ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -908,7 +927,7 @@ main .wrapper {
   margin: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .searchByStyle .wrapper {
     padding: 60px 0;
     text-align: left;
@@ -935,12 +954,33 @@ footer p {
           flex: 0 0 21%;
 }
 
+@media (max-width: 1200px) {
+  .contact {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    margin-bottom: 40px;
+  }
+}
+
 .contact p {
   margin: 0;
 }
 
+@media (max-width: 1200px) {
+  .contact p {
+    text-align: center;
+  }
+}
+
 .contact .email {
   margin: 20px 0;
+}
+
+@media (max-width: 1200px) {
+  .contact .email {
+    margin: 2px 0;
+  }
 }
 
 .contact .email a {
@@ -961,10 +1001,17 @@ footer p {
           justify-content: left;
 }
 
+@media (max-width: 1200px) {
+  .contact ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 10px;
+  }
+}
+
 .contact ul li {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  padding: 0;
+  padding: 10px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 45px;
           flex: 0 0 45px;
@@ -988,6 +1035,13 @@ footer p {
   left: -5%;
 }
 
+@media (max-width: 500px) {
+  .contactFormContainer {
+    left: 0;
+    top: -20px;
+  }
+}
+
 .contactMain {
   padding: 0;
 }
@@ -1006,12 +1060,34 @@ footer p {
           align-items: center;
 }
 
+@media (max-width: 1200px) {
+  .contactMain .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .contactMain .wrapper {
+    width: 100%;
+  }
+}
+
 .contactForm {
   -webkit-box-shadow: 25px 25px #0CADC0;
           box-shadow: 25px 25px #0CADC0;
   padding: 80px 40px 40px 40px;
   background: #21404F;
   color: #ffffff;
+}
+
+@media (max-width: 500px) {
+  .contactForm {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .contactForm ::-webkit-input-placeholder {
@@ -1064,6 +1140,12 @@ footer p {
   width: 100%;
 }
 
+@media (max-width: 500px) {
+  .contactForm div.message {
+    padding: 10px 0;
+  }
+}
+
 .contactForm div.message textarea {
   width: calc(100% - 50px);
   padding: 5px 0;
@@ -1098,17 +1180,24 @@ form .contactInfo {
   width: 48%;
 }
 
+@media (max-width: 850px) {
+  form .contactInfo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 article {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 63%;
           flex: 0 0 63%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   article {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 80%;
-            flex: 0 0 80%;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
   }
 }
 
@@ -1135,7 +1224,7 @@ aside h3 {
           justify-content: space-between;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .blogMain {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1154,6 +1243,18 @@ aside h3 {
   border-left: none;
 }
 
+@media (max-width: 850px) {
+  .blogContainer {
+    border-left: 15px solid #0CADC0;
+  }
+}
+
+@media (max-width: 500px) {
+  .blogContainer {
+    border: 0;
+  }
+}
+
 .blogContent,
 .commentsContainer {
   margin-left: 16%;
@@ -1166,8 +1267,27 @@ aside h3 {
   }
 }
 
+@media (max-width: 850px) {
+  .blogContent,
+  .commentsContainer {
+    margin: 0;
+  }
+}
+
 .blogContent {
   padding: 60px 80px 80px 0;
+}
+
+@media (max-width: 850px) {
+  .blogContent {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .blogContent {
+    padding: 20px;
+  }
 }
 
 .blogImage {
@@ -1234,6 +1354,12 @@ aside h3 {
   margin: 60px 0;
 }
 
+@media (max-width: 850px) {
+  .comment {
+    margin: 30px 0;
+  }
+}
+
 .comment div p:first-of-type {
   color: #1A315C;
   font-weight: bold;
@@ -1251,8 +1377,21 @@ aside h3 {
           flex: 0 1 85%;
 }
 
+@media (max-width: 850px) {
+  .commentContent {
+    margin-left: 20px;
+  }
+}
+
 .blogCommentForm {
-  padding: 40px;
+  padding: 0px;
+}
+
+@media (max-width: 850px) {
+  .blogCommentForm {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 }
 
 .blogCommentForm input,
@@ -1278,6 +1417,12 @@ aside h3 {
   color: #21404F;
 }
 
+@media (max-width: 500px) {
+  .blogCommentForm label {
+    padding-left: 0;
+  }
+}
+
 .blogCommentForm div.message {
   border: 2px solid #0CADC0;
   margin: 40px 0;
@@ -1290,10 +1435,24 @@ aside h3 {
   width: 100%;
 }
 
+@media (max-width: 500px) {
+  .blogCommentForm div.message {
+    margin: 15px 0;
+    padding: 20px;
+  }
+}
+
 .blogCommentForm div.message textarea {
   width: calc(100% - 50px);
   padding: 5px 0;
   margin: 0 25px;
+}
+
+@media (max-width: 500px) {
+  .blogCommentForm div.message textarea {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .blogCommentForm button {
@@ -1325,9 +1484,38 @@ aside {
   }
 }
 
+@media (max-width: 1200px) {
+  aside {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+  }
+}
+
+@media (max-width: 850px) {
+  aside {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+  }
+}
+
 aside h3 {
   font-size: 3.5rem;
   letter-spacing: .29rem;
+}
+
+@media (max-width: 850px) {
+  aside h3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  aside h3 {
+    margin-bottom: 20px;
+  }
 }
 
 aside a {
@@ -1345,9 +1533,34 @@ aside .asideContainer {
   padding-bottom: 40px;
 }
 
+@media (max-width: 850px) {
+  aside .asideContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  aside .asideContainer {
+    padding: 20px;
+  }
+}
+
 aside p {
   margin-top: 0;
   margin-bottom: 50px;
+}
+
+@media (max-width: 850px) {
+  aside p {
+    margin-bottom: 25px;
+  }
 }
 
 aside ul {
@@ -1369,4 +1582,10 @@ aside li {
   position: relative;
   top: -20px;
   left: 0;
+}
+
+@media (max-width: 850px) {
+  .asideImage {
+    display: none;
+  }
 }

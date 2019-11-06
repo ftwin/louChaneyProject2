@@ -4,7 +4,7 @@ article {
     flex: 0 0 63%;
 
     @include largeTablet {
-        flex: 0 0 80%;
+        flex: 0 0 90%;
     }
 }
 
@@ -35,6 +35,14 @@ aside {
     background: $mainColour2;
     border: 15px solid $accentColour;
     border-left: none;
+
+    @include largeTablet {
+        border-left: 15px solid $accentColour;
+    }
+
+    @include smallTablet {
+        border: 0;
+    }
 }
 
 .blogContent,
@@ -44,10 +52,24 @@ aside {
     @include laptopSmall {
         margin-left: 10%;
     }
+
+    @include largeTablet {
+        margin: 0;
+    }
+
+    
 }
 
 .blogContent {
     padding: 60px 80px 80px 0;
+
+    @include largeTablet {
+        padding: 40px;
+    }
+
+    @include smallTablet {
+        padding: 20px;
+    }
 }
 
 
@@ -98,6 +120,10 @@ aside {
     justify-content: space-between;
     margin: 60px 0;
 
+    @include largeTablet {
+        margin: 30px 0;
+    }
+
     div p:first-of-type {
         color: $secondaryColour;
         font-weight: bold;
@@ -110,12 +136,21 @@ aside {
 
 .commentContent {
     flex: 0 1 85%;
+
+    @include largeTablet {
+        margin-left: 20px;
+    }
 }
 //Comment Form-----------------------------------------------
 
 .blogCommentForm {
 
-    padding: 40px;
+    padding: 0px;
+
+    @include largeTablet {
+        padding: 10px;
+        margin-bottom: 20px;
+    }    
 
     input,
     textarea {
@@ -138,6 +173,10 @@ aside {
         display: block;
         padding-left: 25px;
         color: $mainColour2;
+
+        @include smallTablet {
+           padding-left: 0;
+        }
     }
 
     div.message {
@@ -150,10 +189,20 @@ aside {
         width: 100%;
         padding: 40px 0;
 
+        @include smallTablet {
+            margin: 15px 0;
+            padding: 20px;
+        }   
+
         textarea {
             width: calc(100% - 50px);
             padding: 5px 0;
             margin: 0 25px;
+
+            @include smallTablet {
+                margin: 0;
+                width: 100%;
+            }
         }
     }
 
@@ -183,11 +232,29 @@ aside {
     @include laptop {
         flex: 0 0 30%;
     }
+
+    @include laptopSmall {
+        flex: 0 0 35%;
+    }
+
+    @include largeTablet {
+        flex: 0 0 90%;
+    }
     
     h3 {
     font-size: 3.5rem;
     letter-spacing: .29rem;
+
+    @include largeTablet {
+        width: 100%;
+        text-align: center;
+        }
+
+        @include smallTablet {
+            margin-bottom: 20px;
+        }   
     }
+
     a {
     color: #ffffff;
     }
@@ -200,12 +267,28 @@ aside {
         background: $mainColour2;
         padding-left: 20px;
         padding-bottom: 40px;
+
+        @include largeTablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include smallTablet {
+            padding: 20px;
+        }   
+
     }
 
     p {
         margin-top: 0;
         margin-bottom: 50px;
-    }
+
+        @include largeTablet {
+            margin-bottom: 25px;
+        }
+    }   
+    
 
     ul {
         list-style: initial;
@@ -224,4 +307,8 @@ aside {
     position: relative;
     top: -20px;
     left: 0;
+
+    @include largeTablet {
+        display: none;
+    }
 }
