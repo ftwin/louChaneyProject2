@@ -112,35 +112,76 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include laptopSmall {
+        justify-content: center;
+    }
+
     div {
-        width: 45%;
+        flex: 0 2 45%;
+
+        @include laptopSmall {
+        flex: 0 0 80%;
+        }
     }
     div:nth-of-type(2) {
         margin-right: 10%;
+        @include laptopSmall {
+            margin: 60px 0;
+        }
     }
     
     div:nth-of-type(3) {
         order: 1;
+         @include laptopSmall {
+                order: initial;
+            }
     }
 
     div:nth-of-type(4) {
         text-align: right;
         margin-left: 10%;
         margin-top: 100px;
+
+        @include laptop {
+            margin-top: 40px;
+        }
     }
 
     div:nth-of-type(2),
     div:nth-of-type(4) {
         padding: 50px 0;
-        width: 35%;
+        flex: 0 0 35%;
+
+        @include laptop {
+            padding: 10px 0;
+        }
+        @include laptopSmall {
+            flex: 0 0 75%;
+        }
     }
+
+     @include laptopSmall {
+         div {
+            flex: 0 0 80%;
+            }
+    }
+
     .leftImage {
         position: relative;
         img {
             box-shadow: 25px 25px $accentColour;
             position: absolute;
             top: -75px;
+
+            @include laptopSmall {
+                position: static;
+            }
         }
+        @include laptopSmall {
+                flex: 0 0 80%;
+            }
+        
     }
 
     .rightImage {
@@ -149,9 +190,18 @@ main {
             box-shadow: -25px 25px $accentColour;
             position: absolute;
             bottom: -75px;
+            
+            @include laptopSmall {
+                position: static;
+                width: 100%;
+            }
         }
+         @include laptopSmall {
+                width: 100%;
+            }
     }
 }
+
 
 .searchByStyle .wrapper {
     padding: 150px 0;

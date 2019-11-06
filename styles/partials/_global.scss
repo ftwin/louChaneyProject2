@@ -15,6 +15,7 @@ body {
 
 img {
     width: 100%;
+    display: block;
 }
 
 h2, h3 {
@@ -37,6 +38,14 @@ h3 {
     line-height: 5.8rem;
     letter-spacing: 2.5px;
     margin-bottom: 0;
+
+    @include laptop {
+        font-size: 3.5rem;
+    }
+
+    @include laptopSmall {
+        font-size: 3rem;
+    }
 }
 
 a {

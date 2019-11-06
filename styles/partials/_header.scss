@@ -4,6 +4,12 @@ header {
     background-size: cover;
     height: 95vh;
     min-height: 700px;
+
+    @include laptop {
+        background-position: center;
+    }
+
+
     a {
         color: $secondaryColour;
         font-weight: bold;
@@ -13,6 +19,8 @@ header {
         padding: 20px;
     }
 }
+
+
 
 header.contact {
     background: url(../assets/contactHeader.jpg);
@@ -82,11 +90,9 @@ h1 {
     color: $secondaryColour;
     width: 55%;
     font-weight: normal;
-}
 
-@include laptop {
-    h1 {
-        color: red;
+    @include laptop {
+        width: 70%;
     }
 }
 
